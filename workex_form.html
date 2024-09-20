@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Information</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Unicons CDN Link for Icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/thinline.css">
+    <!-- Iconscout Link For Icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <!-- Other -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="container-fluid">
+
+        <div class="container">
+            <div>
+                <h2 class="mt-5 mb-4">EMPLOYEE MANAGEMENT</h2>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="mt-5 mb-4">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- General Information Section -->
+
+        <div class="form-outer">
+            <form action="#">
+                <div class="page slide-page">
+                    <div class="container">
+                        <div class="container-fluid">
+                            <div><h4>GENERAL INFORMATION</h4></div>
+                            <hr class="px-5">
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label for="profile-pic" class="font-weight-bold p-2">Worker Profile Picture</label>
+                                </div>
+                                <div class="col-9">
+                                    <div class="row align-items-center">
+                                        <div class="col-6 px-5">
+                                            <div class="card card-image p-2">
+                                                <img src="" alt="" id="img-pic" class="card-image-top">
+                                            </div>
+                                        </div>
+                                        <div class="col-6 px-5">
+                                            <div class="card card-profile-pic p-2">
+                                                <input type="file" class="form-control-file p-2" id="profile-pic" accept=".png,.jpg,.jpeg">
+                                            </div>
+                                            <button id="remove-profile-pic" class="btn btn-danger mt-3" type="button">Remove</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label for="full-name" class="font-weight-bold p-2">Full Name</label>
+                                </div>
+                                <div class="col-9">
+                                    <input type="text" class="form-control" placeholder="Full Name">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <label for="full-name-with-initials" class="font-weight-bold p-2">Full Name with Initials</label>
+                                </div>
+                                <div class="col-9">
+                                    <input type="text" class="form-control" placeholder="Full Name with Initials">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <label for="" class="font-weight-bold p-2">NIC/ Passport/ Driver's License</label>
+                                </div>
+                                <div class="col-9">
+                                    <div class="container card d-flex justify-content-center">
+                                        <!-- nav options -->
+                                        <ul class="nav nav-pills mb-3 shadow-sm" id="pills-tab" role="tablist">
+                                          <li class="nav-item">
+                                            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">NIC</a>
+                                          </li>
+                                          <li class="nav-item">
+                                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Passport</a>
+                                          </li>
+                                          <li class="nav-item">
+                                            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Driving License</a>
+                                          </li>
+                                        </ul>
+                                    
+                                        <!-- content -->
+                                        <div class="tab-content" id="pills-tabContent p-3">
+                                            <!-- 1st card -->
+                                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                                <div class="row">
+                                                    <div class="col-10 align-self-center ml-4">
+                                                        <input type="text" class="form-control" placeholder="NIC No">
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="row ml-5">
+                                                            <div class="card card-image">
+                                                                <div class="center">
+                                                                    <div class="dropzone">
+                                                                        <img src="http://100dayscss.com/codepen/upload.svg" id="img-nic-front" class="upload-icon" />
+                                                                        <p class="nic-dec">NIC Front</p>
+                                                                        <input type="file" class="upload-input" id="nic-front" accept=".png,.jpg,.jpeg"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row ml-5">
+                                                            <button id="remove-nic-front" class="btn btn-danger" type="button">Remove</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="row">
+                                                            <div class="card card-image">
+                                                                <div class="center">
+                                                                    <div class="dropzone">
+                                                                        <img src="http://100dayscss.com/codepen/upload.svg" id="img-nic-back" class="upload-icon" />
+                                                                        <p class="nic-dec">NIC Back</p>
+                                                                        <input type="file" class="upload-input" id="nic-back" accept=".png,.jpg,.jpeg"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <button id="remove-nic-back" class="btn btn-danger" type="button">Remove</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 2nd card -->
+                                            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                                <div class="row">
+                                                    <div class="col-10 align-self-center ml-4">
+                                                        <input type="text" class="form-control" placeholder="Passport No">
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="row ml-5">
+                                                            <div class="card card-image">
+                                                                <div class="center">
+                                                                    <div class="dropzone">
+                                                                        <img src="http://100dayscss.com/codepen/upload.svg" id="passport-img1" class="upload-icon" />
+                                                                        <p class="nic-dec">Upload 1</p>
+                                                                        <input type="file" class="upload-input" id="passport1" accept=".png,.jpg,.jpeg"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row ml-5">
+                                                            <button id="remove-passport1" class="btn btn-danger" type="button">Remove</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="row">
+                                                            <div class="card card-image">
+                                                                <div class="center">
+                                                                    <div class="dropzone">
+                                                                        <img src="http://100dayscss.com/codepen/upload.svg" id="passport-img2" class="upload-icon" />
+                                                                        <p class="nic-dec">Upload 2</p>
+                                                                        <input type="file" class="upload-input" id="passport2" accept=".png,.jpg,.jpeg"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <button id="remove-passport2" class="btn btn-danger" type="button">Remove</button>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                          <!-- 3nd card -->
+                                            <div class="tab-pane fade third" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                                <div class="row">
+                                                    <div class="col-6 align-self-center ml-4">
+                                                        <input type="text" class="form-control" placeholder="Driver's License No">
+                                                        <br>
+                                                        <div class="card card-profile-pic p-2">
+                                                            <input type="file" class="form-control-file p-2" id="license-pic" accept=".png,.jpg,.jpeg">
+                                                        </div>
+                                                        <button id="remove-license-img" class="btn btn-danger mt-3" type="button">Remove</button>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <div class="card card-image">
+                                                            <img src="" alt="" id="img-license-pic" class="card-image-top">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-9">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <label for="birthday" class="font-weight-bold p-2">Birthday</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input type="date" class="form-control" placeholder="DDMMYYYY">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <label for="age" class="font-weight-bold p-2">Age</label>
+                                        </div>
+                                        <div class="col-9">
+                                            <input type="number" class="form-control" placeholder="Age">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <label for="contactn-no" class="font-weight-bold p-2">Contact No</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <input type="text" class="form-control" placeholder="1234567890">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-9">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <label for="civil-status" class="font-weight-bold p-2">Civil Status</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input type="text" class="form-control" placeholder="Civil Status">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <label for="gender" class="font-weight-bold p-2">Gender</label>
+                                        </div>
+                                        <div class="col-9">
+                                            <select class="form-control">
+                                                <option>Male</option>
+                                                <option>Female</option>
+                                                <option>Prefer Not to Say</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-3">
+                                    <label for="medical-certificate" class="font-weight-bold p-2">Medical Certificate</label>
+                                </div>
+                                <div class="col-9">
+                                    <div class="wrapper">
+                                        <div class="box">
+                                            <div class="input-box">
+                                                <input type="file" id="upload" accept=".doc,.docx,.pdf,.png,.jpg,.jpeg" hidden>
+                                                <label for="upload" class="uploadlable1">
+                                                    <span><i class="fa fa-cloud-upload"></i></span>
+                                                    <p>Click to Upload</p>
+                                                </label>
+                                            </div>
+                                
+                                            <div id="filewrapper">
+                                                <h3 class="uploaded">Uploaded Documents</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Mother's Details-->
+                            <div class="row mt-3">
+                                <div class="col-3">
+                                    <label for="mother-name" class="font-weight-bold p-2">Mother's Name</label>
+                                </div>
+                                <div class="col-9">
+                                    <input type="text" class="form-control" placeholder="Mother's Name">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <label for="job" class="font-weight-bold p-2">Job</label>
+                                </div>
+                                <div class="col-9">
+                                    <input type="text" class="form-control" placeholder="Job">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-9">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <label for="contactn-no" class="font-weight-bold p-2">Contact No</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input type="text" class="form-control" placeholder="1234567890">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <label for="age" class="font-weight-bold p-2">Age</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input type="number" class="form-control" placeholder="Age">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Father's Details-->
+                            <div class="row mt-3">
+                                <div class="col-3">
+                                    <label for="father-name" class="font-weight-bold p-2">Father's Name</label>
+                                </div>
+                                <div class="col-9">
+                                    <input type="text" class="form-control" placeholder="Father's Name">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <label for="job" class="font-weight-bold p-2">Job</label>
+                                </div>
+                                <div class="col-9">
+                                    <input type="text" class="form-control" placeholder="Job">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-9">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <label for="contactn-no" class="font-weight-bold p-2">Contact No</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input type="text" class="form-control" placeholder="1234567890">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <label for="age" class="font-weight-bold p-2">Age</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input type="number" class="form-control" placeholder="Age">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3 mb-3">
+                            <div class="col-auto mr-auto"></div>
+                            <div class="col-auto">
+                                <button type="button" class="firstNext btn btn-warning font-weight-bold px-5">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Information Section -->
+
+                <div class="page">
+                    <div class="container">
+                        <div class="container-fluid">
+                            <div><h4>EDUCATION DETAILS</h4></div>
+                            <hr class="px-5">
+                        </div>
+                        <div class="edu">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label for="institute" class="font-weight-bold p-2">Institute</label>
+                                </div>
+                                <div class="col-9">
+                                    <input type="text" class="form-control" placeholder="School/ Collage/ University Name">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <label for="certificate" class="font-weight-bold p-2">Certificate Type</label>
+                                </div>
+                                <div class="col-9">
+                                    <!-- Dropdown to select certificate type -->
+                                    <select id="certificate-type" class="form-control">
+                                        <option value="certificate">Certificate</option>
+                                        <option value="diploma">Diploma</option>
+                                        <option value="higher-diploma">Higher Diploma</option>
+                                        <option value="degree">Degree</option>
+                                        <option value="master">Master</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <label for="subject" class="font-weight-bold p-2">Subject</label>
+                                </div>
+                                <div class="col-9">
+                                    <input type="text" class="form-control" placeholder="Subject">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <label for="time-duration" class="font-weight-bold p-2">Time Duration</label>
+                                </div>
+                                <div class="col-9">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="date" class="form-control" placeholder="Start Date">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="date" class="form-control" placeholder="End Date">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <label for="proof-files" class="font-weight-bold p-2">Proof Files</label>
+                                </div>
+                                <div class="col-9">
+                                    <div class="row">
+                                        <div class="col-5 align-self-center">
+                                            <div class="card card-profile-pic p-2">
+                                                <input type="file" class="form-control-file p-2" id="proof-files">
+                                            </div>
+                                        </div>
+                                        <div class="col-4 align-self-center">
+                                            <button id="remove-certificate" class="btn btn-danger mt-3" type="button">Remove</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrapper">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <button type="button" class="btn btn-outline-warning font-weight-bold rounded px-5" id="add-button">Add Education Details</button>
+                                    </div>
+                                    <div class="col-4">
+                                        <button type="button" class="btn btn-outline-success font-weight-bold rounded px-5" id="update-button">Update Education Details</button>
+                                    </div>
+                                    <div class="col-4">
+                                        <button type="button" class="btn btn-outline-danger font-weight-bold rounded px-5" id="add-button">Delete Education Details</button>
+                                    </div>
+                                </div>
+                                <li class="certificate-entry">
+                                    <div class="details">
+                                      <p>Certificate Name</p>
+                                      <span>Certificate Type</span>
+                                      <span>Subject</span>
+                                    </div>
+                                    <div class="bottom-content">
+                                        <div class="settings">
+                                            <span>Start Time</span>
+                                            <span>End Time</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>
+                        </div>
+                        <div class="row mt-3 mb-3">
+                            <div class="col-auto mr-auto">
+                                <button type="button" class="prev-1 btn btn-warning font-weight-bold px-5">Back</button>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="next-1 btn btn-warning font-weight-bold px-5">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Information Section -->
+
+                <div class="page">
+                    <div class="container">
+                        <div class="container-fluid">
+                            <div><h4>SKILLS</h4></div>
+                            <hr class="px-5">
+                        </div>
+                        <div class="row">
+                            <div class="wrapper wrapper-x">
+                                <div class="title">
+                                  <h2></h2>
+                                </div>
+                                <div class="content">
+                                    <p>Press enter or add a comma after each tag</p>
+                                    <ul id="tag-list"><input type="text" id="tag-input" spellcheck="false"></ul>
+                                  </div>                      
+                                <div class="details">
+                                  <p><span>10</span> tags are remaining</p>
+                                  <button class="btn btn-danger font-weight-bold">Remove All</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3 mb-3">
+                            <div class="col-auto mr-auto">
+                                <button type="button" class="prev-2 btn btn-warning font-weight-bold px-5">Back</button>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="next-2 btn btn-warning font-weight-bold px-5">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Experience Section -->
+
+                <div class="page">
+                    <div class="container">
+                        <div class="container-fluid">
+                            <div><h4>WORK EXPERIENCE</h4></div>
+                            <hr class="px-5">
+                        </div>
+                        <div class="popup-box">
+                            <div class="popup">
+                                <div class="content popup-header">
+                                    <header>
+                                      <p></p>
+                                      <i class="uil uil-times close-popup"></i>
+                                    </header>
+                                    <div class="row1 title">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="company-name" class="font-weight-bold">Company Name</label>
+                                                <input type="text" class="form-control" placeholder="Company Name" spellcheck="false">
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="position" class="font-weight-bold">Position</label>
+                                                <input type="text" class="form-control" placeholder="Position">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row1 description">
+                                        <label for="time-duration" class="font-weight-bold">Time Duration</label>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="start-date"><small>Start Date</small></label>
+                                                <input type="date" id="start-date" class="form-control" placeholder="Start Date">
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="end-date"><small>End Date</small></label>
+                                                <input type="date" id="end-date" class="form-control" name="end-date" placeholder="End Date">
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <label for="reason-of-resign" class="font-weight-bold">Reason of Resign</label>
+                                            </div>
+                                            <div class="col-9">
+                                                <div class="row">
+                                                    <textarea name="" id="reason-of-resign-text" cols="30" rows="10" class="input-align"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <label for="resign-or-fired" class="font-weight-bold">Resign or Fired</label>
+                                            </div>
+                                            <div class="col-9">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="form-check input-align">
+                                                            <input class="form-check-input mb-2" type="radio" name="ResignFired" id="resign">
+                                                            <label class="form-check-label ml-5" for="resign">Resigned</label>
+                                                          </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="form-check input-align">
+                                                            <input class="form-check-input mb-2" type="radio" name="ResignFired" id="fired">
+                                                            <label class="form-check-label ml-5" for="fired">Fired</label>
+                                                          </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <label for="on-time-work" class="font-weight-bold">On time Work</label>
+                                            </div>
+                                            <div class="col-9">
+                                                <div class="row">
+                                                        <div class="rating-box" data-field="on-time-work">
+                                                            <div class="stars">
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <textarea name="" id="on-time-work-description" cols="30" rows="10"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <label for="teamwork" class="font-weight-bold">TeamWork</label>
+                                            </div>
+                                            <div class="col-9">
+                                                <div class="row">
+                                                        <div class="rating-box" data-field="teamwork">
+                                                            <div class="stars">
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <textarea name="" id="teamwork-description" cols="30" rows="10"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <label for="communication" class="font-weight-bold">Communication</label>
+                                            </div>
+                                            <div class="col-9">
+                                                <div class="row">
+                                                        <div class="rating-box" data-field="communication">
+                                                            <div class="stars">
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <textarea name="" id="communication-description" cols="30" rows="10"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <label for="language" class="font-weight-bold">Language</label>
+                                            </div>
+                                            <div class="col-9">
+                                                <div class="row">
+                                                        <div class="rating-box" data-field="language">
+                                                            <div class="stars">
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <textarea name="" id="language-description" cols="30" rows="10"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <label for="trust" class="font-weight-bold">Trust</label>
+                                            </div>
+                                            <div class="col-9">
+                                                <div class="row">
+                                                        <div class="rating-box" data-field="trust">
+                                                            <div class="stars">
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <textarea name="" id="trust-description" cols="30" rows="10"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <label for="extra-abilities" class="font-weight-bold">Extra Abilities</label>
+                                            </div>
+                                            <div class="col-9">
+                                                <div class="row">
+                                                    <textarea name="" id="extra-abilities-description" cols="30" rows="10"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <label for="extra-activities" class="font-weight-bold">Extra Activities</label>
+                                            </div>
+                                            <div class="col-9">
+                                                <div class="row">
+                                                        <div class="rating-box" data-field="extra-activities">
+                                                            <div class="stars">
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <textarea name="" id="extra-activities-description" cols="30" rows="10"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <label for="working-details" class="font-weight-bold">Working Details</label>
+                                            </div>
+                                            <div class="col-9">
+                                                <div class="row">
+                                                    <textarea name="" id="working-details-description" cols="30" rows="10"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                    </div>
+                                    <button class="btn btn-warning font-weight-bold rounded add-btn"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                          <li class="add-box">
+                              <button type="button" class="btn btn-outline-warning font-weight-bold align-self-center px-5">+ Add Work Experience</button>
+                          </li>
+                        </div>
+                        <div class="row mt-3 mb-3">
+                            <div class="col-auto mr-auto">
+                                <button type="button" class="prev-3 btn btn-warning font-weight-bold px-5">Back</button>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="submit btn btn-warning font-weight-bold px-5">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+
+    <!--Bootstrap Js-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <!-- Switching Tabs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--Custom Js-->
+    <script src="js/script.js"></script>
+</body>
+</html>
