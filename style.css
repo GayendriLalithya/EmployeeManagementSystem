@@ -1,0 +1,770 @@
+/*All*/
+.btn-warning{
+  color: white;
+}
+hr{
+  border-width: 2px;
+  background-color: black;
+}
+.card-profile-pic{
+  border: solid 2px; 
+}
+.card-image{
+  width: 18rem;
+  height: 18rem;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+.btn-outline-warning, .btn-outline-danger, .btn-outline-success{
+  border-width: 2px;
+}
+
+/* nav */
+.card {
+  max-width: 60rem;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: inline-flex; /* Allows the card to adjust to its content */
+}
+
+.card img {
+  width: auto; /* Retain the original width */
+  height: auto; /* Retain the original height */
+  max-height: 17rem;
+  max-width: 17rem;
+}
+
+a.active {
+  border-bottom: 3px solid #ffc000;
+}
+
+.nav-link {
+  color: rgb(110, 110, 110);
+  font-weight: 500;
+}
+.nav-link:hover {
+  color: #ffc000;
+}
+
+.nav-pills .nav-link.active {
+  color: black;
+  background-color: white;
+  border-radius: 0.5rem 0.5rem 0 0;
+  font-weight: 600;
+}
+
+.tab-content {
+  padding-bottom: 1.3rem;
+}
+
+/********************************* Because of the CSS error ********************************/
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; /* For cross-browser consistency */
+  padding: 5px; /* Adjust to your preference */
+  border: 1px solid #ccc;
+  background: transparent; /* Ensures no background-image */
+  background-color: white; /* Optional, for a clean background */
+  cursor: pointer; /* Indicates it's a clickable element */
+}
+
+select::-ms-expand {
+  display: none; /* Hide the arrow in Internet Explorer/Edge */
+}
+
+/* Adding custom arrow using a background-image */
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  padding-right: 20px; /* Space for the custom arrow */
+}
+
+.custom-select:after {
+  content: '▼'; /* Unicode character for the arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust based on padding-right */
+  transform: translateY(-50%);
+  pointer-events: none; /* Makes it non-clickable */
+}
+/*****************************************************************/
+
+ul {
+  list-style: none;
+  margin-top: 1rem;
+  padding-inline-start: 0;
+}
+
+/* NIC Image Upload */
+
+.dropzone {
+  width: 100px;
+  height: 80px;
+  border: 1px dashed #999;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.upload-icon {
+  margin: 25px 2px 2px 2px;
+}
+
+.upload-input {
+  position: relative;
+  top: -62px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.center .upload-icon{
+  position: absolute;
+  top: 20%;
+  bottom: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+  width: auto; /* Retain the original width */
+  height: auto; /* Retain the original height */
+  max-height: 17rem;
+  max-width: 17rem;
+}
+
+.nic-dec {
+  width: 100%;
+  /* height: 50px; */
+  text-align: center;
+  color: #ccc;
+  font-size: 16px;
+  font-weight: 300;
+  color: #666;
+}
+
+/* Medical Certificate Upload Section */
+
+.box{
+  max-width: 100%;
+  background: #fff;
+  padding: 0;
+  width: 100%;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.upload-area-title{
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.uploadlable1{
+  width: 100%;
+  min-height: 100px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #999;
+  cursor: pointer;
+}
+
+.uploadlable1 span{
+  font-size: 50px;
+  color: #999;
+}
+
+.uploadlable1 p{
+  color: #999;
+  font-size: 20px;
+  /* font-weight: 800; */
+  /* font-family: cursive; */
+}
+
+.uploaded{
+  margin: 30px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+
+.showfilebox{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 10px 15px;
+  box-shadow: black 0px 0px 0px 0px, #ffc000 0px 0px 0px 1px inset;
+}
+
+.showfilebox .left{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filetype{
+  background: #ffc000;
+  color: white;
+  padding: 5px 15px;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 700;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.left h3{
+  font-weight: 600;
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+}
+
+/* Existing style for the close button (cross) */
+.right span {
+  background: #ffc000;
+  color: white;
+  width: 25px;
+  height: 25px;
+  font-size: 25px;
+  line-height: 25px;
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-left: 5px; /* Added margin to create space */
+}
+
+/* Style for the eye icon link */
+.eye-icon-link {
+  text-decoration: none; /* No underline */
+  color: inherit;       /* Default color */
+  color: black;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  line-height: 20px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-right: 5px; /* Added margin for spacing */
+}
+
+.eye-icon-link:hover {
+  text-decoration: none; /* No underline on hover */
+  color: #ffc000;        /* Optional: Change color on hover */
+}
+
+
+
+/* Skills Section CSS */
+
+::selection{
+  color: #fff;
+  background: #ffc000;
+}
+.wrapper{
+  background: #fff;
+  border-radius: 10px;
+  /* padding: 18px 25px 20px; */
+  /* box-shadow: 0 0 30px rgba(0,0,0,0.06); */
+}
+.wrapper :where(.title, li, li i, .details){
+  display: flex;
+}
+.wrapper-x{
+  width: 100%;
+}
+.wrapper-x :where(.title, li, li i, .details){
+  align-items: center; 
+}
+.title h2{
+  font-size: 21px;
+  font-weight: 600;
+}
+.wrapper .content{
+  margin: 10px 0;
+}
+.content p{
+  font-size: 15px;
+}
+.content ul{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 7px;
+  margin: 12px 0;
+  border-radius: 5px;
+  border: 1px solid #ffc000;
+}
+.content ul  li{
+  color: #ffc000;
+  margin: 4px 3px;
+  list-style: none;
+  border-radius: 5px;
+  background: white;
+  padding: 5px 8px 5px 10px;
+  border: 1px solid #ffc000;
+}
+.content ul li i{
+  height: 20px;
+  width: 20px;
+  color: #ffc000;
+  margin-left: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: white;
+  justify-content: center;
+}
+.content ul input{
+  flex: 1;
+  padding: 5px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.wrapper .details{
+  justify-content: space-between;
+}
+
+/* Work Experience Section */
+
+::selection{
+  color: #fff;
+  background: #FFC000;
+}
+.wrapper{
+  margin: 50px;
+  display: grid;
+  gap: 25px;
+  grid-template-rows: repeat(auto-fill);
+}
+.wrapper li{
+  /* height: 250px; */
+  list-style: none;
+  border-radius: 5px;
+  padding: 15px 20px 20px;
+  background: #fff;
+  justify-content: center;
+  /* box-shadow: 0 4px 8px rgba(0,0,0,0.05); */
+}
+.icon, .bottom-content, 
+.popup, header, .settings .menu li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-box-certificate-type p {
+  color: #FFC000;
+  font-weight: 500;
+  margin-top: 20px;
+}
+.note{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+.note .details{
+  max-height: 165px;
+  overflow-y: auto;
+}
+.note .details::-webkit-scrollbar,
+.popup textarea::-webkit-scrollbar{
+  width: 0;
+}
+.note .details:hover::-webkit-scrollbar,
+.popup textarea:hover::-webkit-scrollbar{
+  width: 5px;
+}
+.note .details:hover::-webkit-scrollbar-track,
+.popup textarea:hover::-webkit-scrollbar-track{
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+.note .details:hover::-webkit-scrollbar-thumb,
+.popup textarea:hover::-webkit-scrollbar-thumb{
+  background: #e6e6e6;
+  border-radius: 25px;
+}
+.note p{
+  font-size: 22px;
+  font-weight: 500;
+}
+.note span{
+  display: block;
+  color: #575757;
+  font-size: 16px;
+  margin-top: 5px;
+}
+.note .bottom-content{
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+/* Education section popup styles */
+
+.certificate-entry {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+border: 1px solid black;
+border-radius: 5px;
+padding: 10px;
+margin: 25px;
+}
+
+.certificate-entry .details {
+max-height: 165px;
+overflow-y: hidden;
+padding: 20px;
+}
+
+.popup textarea::-webkit-scrollbar {
+width: 0;
+}
+
+.popup textarea:hover::-webkit-scrollbar {
+width: 5px;
+}
+
+.popup textarea:hover::-webkit-scrollbar-track {
+background: #f1f1f1;
+border-radius: 25px;
+}
+
+.popup textarea:hover::-webkit-scrollbar-thumb {
+background: #e6e6e6;
+border-radius: 25px;
+}
+
+.certificate-entry p{
+font-size: 22px;
+font-weight: 500;
+}
+
+.certificate-entry span {
+display: block;
+color: #575757;
+font-size: 16px;
+margin-top: 5px;
+}
+
+.certificate-entry .bottom-content {
+padding-top: 10px;
+border-top: 1px solid #ccc;
+}
+
+/**********************************/
+
+.bottom-content span{
+  color: #6D6D6D;
+  font-size: 14px;
+}
+.bottom-content .settings{
+  position: relative;
+}
+.bottom-content .settings i{
+  color: #6D6D6D;
+  cursor: pointer;
+  font-size: 15px;
+}
+.settings .menu{
+  z-index: 1;
+  bottom: 0;
+  right: -5px;
+  padding: 5px 0;
+  background: #fff;
+  position: absolute;
+  border-radius: 4px;
+  transform: scale(0);
+  transform-origin: bottom right;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+.settings.show .menu{
+  transform: scale(1);
+}
+.settings .menu li{
+  height: 25px;
+  font-size: 16px;
+  margin-bottom: 2px;
+  padding: 17px 15px;
+  cursor: pointer;
+  box-shadow: none;
+  border-radius: 0;
+  justify-content: flex-start;
+}
+.menu li:last-child{
+  margin-bottom: 0;
+}
+.menu li:hover{
+  background: #f5f5f5;
+}
+.menu li i{
+  padding-right: 8px;
+}
+
+.popup-box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+}
+.popup-box .popup{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  width: 100%;
+  max-width: 1000px;
+  justify-content: center;
+  transform: translate(-50%, -50%) scale(0.95);
+}
+.popup-box, .popup{
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+.popup-box.show, 
+.popup-box.show .popup{
+  opacity: 1;
+  pointer-events: auto;
+}
+.popup-box.show .popup {
+  transform: translate(-50%, -50%) scale(1);
+}
+.popup .content{
+  border-radius: 5px;
+  background: #fff;
+  width: calc(100% - 15px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 80vh; /* Limit the height to fit the viewport */
+  padding: 20px; /* Add padding for spacing */
+}
+.content header{
+  padding: 15px 25px;
+  border-bottom: 1px solid #ccc;
+}
+.content header p{
+  font-size: 20px;
+  font-weight: 500;
+}
+.content header i{
+  color: #8b8989;
+  cursor: pointer;
+  font-size: 23px;
+}
+.content form{
+  margin: 15px 25px 35px;
+}
+.content form .row1{
+  margin-bottom: 20px;
+}
+form .row1 label{
+  font-size: 18px;
+  display: block;
+  margin-bottom: 6px;
+}
+form :where(
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="search"],
+  textarea
+) {
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding: 0 15px;
+  border-radius: 4px;
+  border: 1px solid #999;
+}
+
+form :where(
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="search"],
+  textarea):focus{
+  box-shadow: 0 2px 4px rgba(0,0,0,0.11);
+}
+
+/* Customize the checkbox input */
+.form-check-input {
+    transform: scale(1.5); /* Scale the checkbox for a larger appearance */
+    background-color: white; /* Default background */
+    border: 2px solid #ffc000; /* Border color to match the website */
+    margin-right: 10px; /* Space between checkbox and label */
+  }
+  
+  /* When the checkbox is checked, change the colors */
+  .form-check-input:checked {
+    background-color: #ffc000; /* Background color when checked */
+    border-color: #ffc000; /* Border color when checked */
+  }
+  
+  /* Change the checkmark color when checked */
+  .form-check-input:checked::after {
+    background-color: white; /* Checkmark color when checked */
+  }
+  
+  /* Style the label to match the color scheme */
+  .form-check-label {
+    color: #333; /* Label text color */
+    font-size: 0.9rem; /* Adjust font size */
+  }
+
+form .row1 textarea{
+  height: 150px;
+  resize: none;
+  padding: 8px 15px;
+}
+form .add-btn{
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  border-radius: 4px;
+  background: #FFC000;
+}
+
+
+
+@media (max-width: 660px){
+  .wrapper{
+    margin: 15px;
+    gap: 15px;
+    grid-template-rows: repeat(auto-fill, 100%);
+  }
+  .popup-box.show .popup{
+    max-width: calc(100% - 15px);
+  }
+  .bottom-content .settings i{
+    font-size: 17px;
+  }
+}
+
+/* Rating stars */
+
+.rating-box {
+  position: relative;
+  background: #fff;
+  /* padding: 15px 25px 20px; */
+  border-radius: 25px;
+  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05); */
+}
+.rating-box header {
+  font-size: 10px;
+  color: #dadada;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.rating-box .stars {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.stars i {
+  color: #e6e6e6;
+  font-size: 25px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.stars i.active {
+  color: #ff9c1a;
+}
+
+.popup {
+  position: relative;
+  /* Other styling for popup */
+}
+
+.close-popup {
+  position: absolute;
+  top: 30px; /* Distance from top */
+  right: 70px; /* Distance from right */
+  cursor: pointer; /* Change cursor to pointer for clickability */
+  color: #333; /* Adjust color to your theme */
+}
+
+.close-popup:hover {
+  color: red; /* Change color on hover for effect */
+}
+
+.popup-box {
+display: none; /* Hide by default*/
+}
+
+.popup-box.show {
+display: block; /* Show when the 'show' class is added*/
+}
+
+.popup-header {
+position: relative; /* Positioning context for the close icon */
+background: #fff;   /* Ensure visibility against background */
+padding: 10px;
+border-bottom: 1px solid #ddd;
+}
+
+.close-icon {
+position: absolute; /* Positioned relative to the header */
+top: 10px;
+right: 10px;
+cursor: pointer;    /* Change cursor to indicate clickability */
+z-index: 1;         /* Ensure it stays above other content */
+}
+
+.popup-content {
+overflow-y: auto;  /* Allows vertical scrolling within the popup */
+max-height: 400px; /* Set a height limit to the popup content */
+padding: 20px;
+}
+
